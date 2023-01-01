@@ -8,13 +8,13 @@ Look at `test/main.c`. The important parts are:
 ```c
 #include "../hotreload_dll.h"
 
-...
+// ...
 
 unsigned long last_mod = 0;
 void *lib_handle = 0;
 char *libpath = "bin/lib.dylib";
 
-...
+// ...
 
 // result is 1 if it was (re)loaded
 //           0 if no change has happened
