@@ -1,5 +1,7 @@
 # hotreload-c
-reload dll's while an application is running
+Reload dll's while an application is running.
+
+Only works on MacOS so far.
 
 # how to use
 
@@ -29,3 +31,20 @@ if (result == 1)
 ```
 
 `hotreload_dll` will load the DLL the first time it is run, then on later runs it will dlclose / dlopen the DLL if the modification date of the DLL as reported by `stat` is greater than `last_mod`.
+
+# testing
+
+```
+git clonehttps://github.com/saikyun/hotreload-c
+cd hotreload-c
+chmod u+x scripts/macos/compile-and-run
+./scripts/macos/compile-and-run
+```
+
+Modify `test/lib.c`.
+
+In another terminal:
+
+```
+cc -dynamic test/lib.c -o bin/lib.dylib
+```
