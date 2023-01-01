@@ -34,6 +34,8 @@ if (result == 1)
 
 ## testing
 
+In a terminal:
+
 ```
 git clone https://github.com/saikyun/hotreload-c
 cd hotreload-c
@@ -41,7 +43,7 @@ chmod u+x scripts/macos/compile-and-run
 ./scripts/macos/compile-and-run
 ```
 
-Modify `test/lib.c`.
+Modify `test/lib.c`. E.g. by adding `+ 10` to the return value of `adder`.
 
 In another terminal:
 
@@ -49,6 +51,14 @@ In another terminal:
 cc -dynamiclib test/lib.c -o bin/lib.dylib
 ```
 
+Now you should see text like this printed in the first terminal:
+
+```
+closing bin/lib.dylib
+[test/lib.c] destructing
+[test/lib.c] initializing
+hello! 1347
+```
 
 ## license
 
