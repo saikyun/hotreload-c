@@ -35,7 +35,7 @@ if (result == 1)
 ## testing
 
 ```
-git clonehttps://github.com/saikyun/hotreload-c
+git clone https://github.com/saikyun/hotreload-c
 cd hotreload-c
 chmod u+x scripts/macos/compile-and-run
 ./scripts/macos/compile-and-run
@@ -46,7 +46,7 @@ Modify `test/lib.c`.
 In another terminal:
 
 ```
-cc -dynamic test/lib.c -o bin/lib.dylib
+cc -dynamiclib test/lib.c -o bin/lib.dylib
 ```
 
 
