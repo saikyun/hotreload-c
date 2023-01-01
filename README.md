@@ -15,6 +15,7 @@ void *lib_handle = 0;
 char *libpath = "bin/lib.dylib";
 
 ...
+
 // result is 1 if it was (re)loaded
 //           0 if no change has happened
 //          -1 on error
