@@ -21,7 +21,7 @@ int hotreload_dll(const char *libpath, void **lib_handle, unsigned long *last_mo
         return -1;
     }
 
-    if (!res && info.st_mtime != *last_mod)
+    if (info.st_mtime != *last_mod)
     {
         *last_mod = info.st_mtime;
 
