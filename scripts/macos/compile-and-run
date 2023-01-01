@@ -6,7 +6,7 @@ echo "\n********* COMPILATION START **********\n"
 
 mkdir -p bin
 
-cc -dynamiclib lib.c -o ./bin/lib.dylib
+cc -dynamiclib test/lib.c -o ./bin/lib.dylib
 # you can just link with the dylib immediately
 # cc bin/lib.dylib main.c -o bin/main && ./bin/main
-cc main.c -o bin/main && ./bin/main
+cc test/main.c -o bin/main -g && ./bin/main
