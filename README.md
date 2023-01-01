@@ -1,7 +1,7 @@
 # hotreload-c
 Reload dll's while an application is running.
 
-Only works on MacOS so far.
+Only works on MacOS so far. PRs for other systems are welcome. :)
 
 ## how to use
 
