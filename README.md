@@ -3,7 +3,7 @@ Reload dll's while an application is running.
 
 Only works on MacOS so far.
 
-# how to use
+## how to use
 
 Look at `test/main.c`. The important parts are:
 
@@ -32,7 +32,7 @@ if (result == 1)
 
 `hotreload_dll` will load the DLL the first time it is run, then on later runs it will dlclose / dlopen the DLL if the modification date of the DLL as reported by `stat` is greater than `last_mod`.
 
-# testing
+## testing
 
 ```
 git clonehttps://github.com/saikyun/hotreload-c
@@ -48,3 +48,8 @@ In another terminal:
 ```
 cc -dynamic test/lib.c -o bin/lib.dylib
 ```
+
+
+## license
+
+This project is dual-licensed under the Unlicense and MIT licenses.
