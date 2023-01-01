@@ -4,7 +4,8 @@ reload dll's while an application is running
 # how to use
 
 Look at `test/main.c`. The important parts are:
-```
+
+```c
 #include "../hotreload_dll.h"
 
 ...
